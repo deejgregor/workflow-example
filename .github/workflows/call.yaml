@@ -1,0 +1,12 @@
+name: Helm Chart
+
+on:
+  workflow_call: {}
+
+jobs:
+  steps:
+    diag:
+      - name: Diag
+        run: |
+            echo "github.ref: ${{ github.ref  }}"
+            echo "github.ref_name: ${{ github.ref_name  }}"

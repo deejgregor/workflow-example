@@ -1,0 +1,16 @@
+name: Demonstrate github.ref_name difference
+
+on:
+  workflow_dispatch: {} 
+
+jobs:
+  diag:
+    steps:
+      - name: Diag
+        run: |
+            echo "github.ref: ${{ github.ref  }}"
+            echo "github.ref_name: ${{ github.ref_name  }}"
+
+  call:
+    name: Call
+    uses: ./.github/workflows/call.yaml
