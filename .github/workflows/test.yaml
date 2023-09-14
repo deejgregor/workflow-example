@@ -1,7 +1,12 @@
 name: Demonstrate github.ref_name difference
 
 on:
-  pull_request: {}
+  pull_request:
+    types:
+    - opened
+    - synchronize
+    - reopened
+    - closed
   workflow_dispatch: {} 
 
 jobs:
