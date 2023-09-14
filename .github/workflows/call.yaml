@@ -1,11 +1,13 @@
-name: Helm Chart
+name: Callable workflow
 
 on:
   workflow_call: {}
+  workflow_dispatch: {}
 
 jobs:
-  steps:
-    diag:
+  diag:
+    runs-on: ubuntu-latest
+    steps:
       - name: Diag
         run: |
             echo "github.ref: ${{ github.ref  }}"
